@@ -4,11 +4,11 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ccc;
+  background-color: transparent transparent;
 }
 
 body {
-  position: relative; /* Use relative instead of absolute */
+  position: relative;
 }
 
 .wrapper {
@@ -17,7 +17,7 @@ body {
   --font-color-sub: #7e7e7e;
   --bg-color: #212121;
   --bg-color-alt: #7e7e7e;
-  --main-color: #fefefe;
+  --main-color: #7b7979;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@ body {
   top: 0;
   width: 100px;
   text-decoration: none;
-  color: var(--font-color);
+  color: var(--font-colorfont-color);
   font-weight: 600;
 }
 
