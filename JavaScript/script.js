@@ -19,14 +19,18 @@ let currentContent = "";
 
 function showIframe(content) {
   const iframe = document.getElementById("contentIframe");
+  const mainContent = document.getElementById("mainContent");
   if (currentContent !== content) {
       currentContent = "";
     iframe.src = content;
+    mainContent.classList.add("hidden");
     iframe.classList.add("showIframe");
     iframe.classList.remove("hideIframe");
     iframe.classList.remove("hidden");
     currentContent = content;
   } else {
+      mainContent.classList.remove("hidden");
+
     iframe.classList.remove("showIframe");
     iframe.classList.add("hideIframe");
     iframe.classList.add("hidden");
@@ -40,14 +44,24 @@ function showIframe(content) {
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const navbarClose = document.querySelector("#navbar-close");
+  const UseMenu = document.querySelector("#mainContent");
   const menu = document.querySelector(".menu-content");
   const menuItems = document.querySelectorAll(".submenu-item");
   const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
   const kingLink = document.querySelector("a[href='../HTML/home_page.html']");
 
-  if (navbarClose) {
-    navbarClose.addEventListener("click", () =>
+  if (navbarClose || UseMenu) {
+    navbarClose.addEventListener("click", () =>{
       navbar.classList.toggle("close")
+      UseMenu.classList.toggle("pl__keep__size");
+
+    }
+    );
+    UseMenu.addEventListener("click", () =>{
+      navbar.classList.toggle("close")
+      UseMenu.classList.toggle("pl__keep__size");
+    }
+
     );
   }
 
