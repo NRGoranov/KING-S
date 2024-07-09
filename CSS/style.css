@@ -286,9 +286,9 @@ main {
   background-color: transparent;
   transition: var(--transition_duration);
 }
-/* .navbar.close ~ .topbar #navbar-close {
+.navbar.close ~ .topbar #navbar-close {
   color: var(--main_color);
-} */
+}
 
 .navbar.close ~ .main {
   left: 0;
@@ -386,7 +386,7 @@ main {
   width: 10vh;
   height: 10vh;
   /* font-weight:bold; */
-  color: rgba(88, 88, 75, 0.713);
+  color: rgba(255, 255, 255, 0.713);
   border-radius: 50%; /* Ensuring the .pl element is also a circle */
 }
 .pl:hover {
@@ -411,11 +411,11 @@ main {
 }
 
 .pl::before {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent);
 }
 
 .pl::after {
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .pl__dot {
@@ -459,7 +459,7 @@ main {
   animation-name: pushInOut2724;
   background-color: var(--primary1);
   border-radius: 0.75em;
-  box-shadow: 0.1em 0.3em 0.2em rgba(255, 255, 255, 0.4) inset,
+  box-shadow: 0.1em 0.3em 0.2em rgba(195, 179, 197, 0.4) inset,
     0 -0.4em 0.2em #2e3138 inset, 0 -1em 0.25em rgba(0, 0, 0, 0.3) inset;
   bottom: 0;
   clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
@@ -606,16 +606,6 @@ main {
   position: relative;
   text-shadow: 0 0 0.1em var(--fg-t);
   transform: rotateZ(-45deg);
-}
-.pl__text::before {
-  content: "\2196"; /* Unicode for crown icon */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 25px;
-  position: absolute;
-  opacity: 0;
-  transition: all var(--transition_duration) ease;
-  color: var(--menu_title_color);
 }
 
 /* Animations */

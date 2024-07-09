@@ -110,7 +110,7 @@ body {
     rgb(138, 138, 144) 26%,
     rgb(97, 97, 99) 85%
   );
-  box-shadow: 0 0 100px rgba(94, 101, 103, 0.61);
+  box-shadow: 0 0 100px rgb(77, 68, 68);
 }
 
 .front,
@@ -120,7 +120,7 @@ body {
 .top,
 .bottom {
   background-color: #e6e1e1;
-  background-image: linear-gradient(160deg, #cdd1d4 0%, #0b0b0b 100%);
+  background-image: linear-gradient(160deg, #a4b6c4 0%, #0b0b0b 100%);
 }
 
 .front {
