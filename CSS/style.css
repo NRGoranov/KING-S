@@ -39,6 +39,7 @@
 
 a {
   cursor: pointer;
+  text-overflow: show;
 }
 
 .hidden {
@@ -49,23 +50,23 @@ a {
     visibility var(--transition_duration) ease-in-out;
 }
 
-    .hideIframe {
-      display: none ;
-    }
-    .showIframe {
-      display: block !important;
-      width: 150vh;
-      height: 90vh;
-      z-index: 9997;
-      border: none;
-    }
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100vh;
-    }
+.hideIframe {
+  display: none !important ;
+}
+.showIframe {
+  display: block !important;
+  width: 150vh;
+  height: 90vh;
+  z-index: 9997;
+  border: none;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+}
 .visible {
   opacity: 1;
   visibility: visible;
@@ -173,11 +174,6 @@ a {
   color: var(--menu_title_color);
 }
 
-/* #h2 {
-  color: var(--menu_title_color);
-  font-weight: 900;
-} */
-
 .menu-content {
   position: relative;
   height: 80%;
@@ -202,6 +198,12 @@ a {
   font-size: 14px;
   padding: 15px 20px;
   transition: all var(--transition_duration) ease;
+}
+
+.LogIn_SignUp {
+  overflow: visible;
+  display: block;
+  white-space: nowrap;
 }
 
 .submenu-active .menu-items {
@@ -362,4 +364,3 @@ a {
   }
 }
 /* Shining */
-

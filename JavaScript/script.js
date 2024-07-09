@@ -53,33 +53,46 @@ function changeClass() {
 
   console.log("change");
 }
-
-let i = 0;
+let currentContent = "";
 
 function changeColor() {
-  var king = document.querySelector("#KING\\'S"); // Use double backslashes to escape the apostrophe
-  if (i % 2 != 1) {
+  var king = document.querySelector("#KING\\'S");
+  var iframe = document.getElementById("contentIframe");
+
+  // Hide iframe when changing color
+  iframe.classList.remove("showIframe");
+  iframe.classList.add("hideIframe");
+
+  if (!king.classList.contains("btn-shine")) {
     king.classList.add("btn-shine");
-  } else if (i % 2 != 0) {
+  } else {
     king.classList.remove("btn-shine");
   }
-  console.log("Class changed for KING'S");
-  i += 1;
-}
-let j = 0;
 
-function showIframe() {
-  var cubes = document.getElementById("cubesIframe");
-  var king = document.querySelector("#KING\\'S"); // Use double backslashes to escape the apostrophe
-  if (j % 2 !== 1) {
-    cubes.classList.add("showIframe");
+  console.log("Class changed for KING'S");
+}
+
+function showIframe(content) {
+  var king = document.querySelector("#KING\\'S");
+  var iframe = document.getElementById("contentIframe");
+
+  // Reset other elements
+  king.classList.remove("btn-shine", "hidden");
+
+  if (currentContent !== content) {
+    iframe.src = content;
+    iframe.classList.add("showIframe");
+    iframe.classList.remove("hideIframe");
     king.classList.add("hidden");
+    currentContent = content;
   } else {
-    cubes.classList.remove("showIframe");
+    iframe.classList.remove("showIframe");
+    iframe.classList.add("hideIframe");
     king.classList.remove("hidden");
+    currentContent = "";
   }
-  console.log("Class changed for cubesIframe");
-  j += 1;
+
+  console.log("Content changed to:", content);
 }
 
 const navbar = document.querySelector(".navbar");
