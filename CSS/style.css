@@ -319,7 +319,7 @@ main {
 }
 
 .topbar #navbar-close.active {
-  background-color: red;
+  background-color: inherit;
   color: var(--main_color);
 }
 
@@ -334,14 +334,6 @@ main {
 }
 
 /* Shining */
-/* h1, h2, h3, h4, h5, h6 {
-  background: var(--headings_color);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  animation: shine 5s linear infinite; 
-}*/
 
 .btn-shine {
   position: absolute;
@@ -388,7 +380,7 @@ main {
   height: 10vh;
   transition: var(--transition_duration);
   /* font-weight:bold; */
-  color: rgba(88, 88, 75, 0.713);
+  color: rgba(255, 255, 255, 0.713);
   border-radius: 50%; /* Ensuring the .pl element is also a circle */
 }
 .pl:hover {

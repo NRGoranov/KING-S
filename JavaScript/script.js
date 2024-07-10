@@ -46,10 +46,13 @@ function showIframe(content) {
 function hideIframe() {
   const iframe = document.getElementById("contentIframe");
   const mainContent = document.getElementById("mainContent");
+    const checker = document.getElementById("checker");
+
   iframe.classList.remove("showIframe");
   iframe.classList.add("hideIframe");
   iframe.classList.add("hidden");
   mainContent.classList.remove("hidden");
+  checker.classList.remove("hidden");
 
   console.log("Iframe hidden");
 }
